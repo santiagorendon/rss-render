@@ -21,7 +21,7 @@ app.post('/api/rss', (req, res)=>{
 // SERVE STATIC ASSETS
 if(process.env.PORT){
   //set static folder
-  app.user(express.static('react-app/build'));
+  app.use(express.static('react-app/build'));
 
   app.get('*', (req, res)=>{
     res.sendFile(path.resolve(__dirname, 'react-app', 'build', 'index.html'));
