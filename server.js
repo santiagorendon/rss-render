@@ -19,7 +19,7 @@ app.post('/api/rss', (req, res)=>{
 })
 
 // SERVE STATIC ASSETS
-if(process.env.NODE_ENV === 'production'){
+if(process.env.PORT){
   //set static folder
   app.user(express.static('react-app/build'));
 
